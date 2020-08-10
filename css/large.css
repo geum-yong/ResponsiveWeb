@@ -1,0 +1,124 @@
+/* 데스크탑 기본 글자 크기 */
+body {
+  font-size: 1.5rem;
+}
+
+/* 데스크탑 레이아웃 */
+.container {
+  justify-content: center;
+}
+.appHeader, .appMain, .menu__list {
+  width: 78.125%;
+  min-width: 1000px;
+  max-width: 1800px;
+}
+.appNavigation {
+  width: 100%;
+}
+
+/* 데스크탑 헤더 */
+.appHeader {
+  grid-template: repeat(2, 50px) / repeat(2, 1fr);
+  align-items: center;
+}
+
+/* 데스크탑 브랜드 */
+.brand {
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+/* 데스크탑 멤버 링크 */
+.memberOnly {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+/* 데스크탑 검색 폼 */
+.searchForm {
+  grid-area: 2 / 2 / 3 / 3;
+  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+.searchForm fieldset {
+  display: contents;
+}
+.buttonSearch {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 2px 10px;
+  background-color: #988574;
+  color: #fff;
+}
+
+/* 데스크탑 네비게이션 */
+.appNavigation {
+  background-color: #988574;
+  box-shadow: 0 -2px 2px 0 #ccc,
+            0 2px 2px 0 #ccc;
+}
+.buttonBurger {
+  display: none;
+}
+.menu__list {
+ margin: 0 auto;
+ padding-top: 20px;
+ padding-bottom: 10px;
+ display: grid;
+ grid-template: auto / repeat(5, 1fr);  
+ gap: 20px;
+ color: #fff;
+}
+.menu__link {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.menu__subMenu li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+
+/* 데스크탑 메인 콘텐츠 */
+.appMain {
+  display: grid;
+  grid-template: auto / repeat(12, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* 데스크탑 추천 서적 */
+.book {
+  grid-area: 1 / 1 / 2 / span 4;
+}
+
+/* 데스크탑 새소식 */
+.news {
+  grid-area: 1 / 5 / 2 / span 8;
+}
+
+/* 데스크탑 게시판 */
+.board {
+  grid-area: 2 / 1 / 3 / span 4;
+}
+
+/* 데스크탑 인기사이트 */
+.favorite {
+  grid-area: 2 / 10 / 3 / span 3;
+}
+.favorite__list a:hover::before,
+.favorite__list a:focus::before {
+  right: -10px;
+}
+
+/* 데스크탑 트위터 */
+.twitter {
+  grid-area: 2 / 5 / 3 / span 5;
+}
+
+/* 데스크탑 푸터 */
+.appFooter {
+  text-align: center;
+}
